@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    #app {
+      background: #34495e;
+      width: 300px;
+      padding: 30px;
+    }
+
+    #app h2 {
+      background-color: #f1c40f;
+      margin-right: -100px;
+    }
+  </style>
+  <script>
+    // function Foo() {
+    //   this.a = 1
+    // }
+
+    // Foo.prototype = {
+    //   aa: 10,
+    //   bb: function () {
+    //     console.log(20)
+    //   }
+    // }
+    // const foo = new Foo()
+
+    // console.log(foo.__proto__)
+
+
+
+    // var Person = function () { };
+    // Person.prototype.Say = function () {
+    //   alert("Person say");
+    // }
+    // Person.prototype.Salary = 50000;
+    // var Programmer = function () { };
+    // Programmer.prototype = new Person();
+    // Programmer.prototype.WriteCode = function () {
+    //   alert("programmer writes code");
+    // };
+    // Programmer.prototype.Salary = 500;
+    // var p = new Programmer();
+    // p.Say();
+    // p.WriteCode();
+    // alert(p.Salary);
+
+
+    function Parent(name, age) {
+      this.name = name
+      this.age = age
+      console.log(this)
+      console.log(this.name, this.age)
+    }
+    function Children(name, age, height) {
+      console.log(this, arguments)
+      // Parent.apply(this,[name,age,height])
+      // Parent(name,age)
+      this.height = height
+    }
+    let lisi = new Children("李四", 12, 170)
+    console.log(lisi.name, lisi.age, lisi.height)
+
+
+  </script>
+
+</body>
+
+</html>
